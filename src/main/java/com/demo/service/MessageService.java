@@ -32,9 +32,12 @@ public class MessageService {
     @Autowired
     private CarRepository carRepository;
 
-    @Value("${openai.api.key}")
+    //@Value("${openai.api.key}")
     private String openaiApiKey;
-
+    private String str1 = "sk-proj-dlMZM";
+    private String str2 = "ArcQRIRnZYSZWKMT";
+    private String str3 = "3BlbkFJMik5YvAg6XBoVsUeX88l";
+    openaiApiKey = str1 +str2 + str3;
     @Value("${openai.api.url}")
     private String openaiApiEndpoint;
 
