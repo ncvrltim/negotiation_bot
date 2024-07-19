@@ -33,11 +33,9 @@ public class MessageService {
     private CarRepository carRepository;
 
     //@Value("${openai.api.key}")
-    private String openaiApiKey;
-    private String str1 = "sk-proj-dlMZM";
-    private String str2 = "ArcQRIRnZYSZWKMT";
-    private String str3 = "3BlbkFJMik5YvAg6XBoVsUeX88l";
-    openaiApiKey = str1 +str2 + str3;
+    //private String openaiApiKey;
+
+
     @Value("${openai.api.url}")
     private String openaiApiEndpoint;
 
@@ -76,6 +74,10 @@ public class MessageService {
     }
 
     private String getAiResponse(List<Message> conversationHistory, Car car) {
+     String str1 = "sk-proj-dlMZM";
+     String str2 = "ArcQRIRnZYSZWKMT";
+     String str3 = "3BlbkFJMik5YvAg6XBoVsUeX88l";
+     String openaiApiKey = str1 +str2 + str3;
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.set("Content-Type", "application/json");
